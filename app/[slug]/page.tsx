@@ -17,8 +17,8 @@ async function Page(props: Props) {
     .limit(1)
     .execute();
   if (!url) return redirect("/");
-
-  return <div>Redirecting..</div>;
+  return redirect(url[0].url!);
+  return <>...</>
 }
 
 export default Page;
